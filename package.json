@@ -1,0 +1,15 @@
+{
+  "name": "tellscript-format",
+  "private": true,
+  "description": "Specification, schema, docs and agent skill of the Tellscript format.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "check": "node scripts/check.mjs examples"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "yaml": "2.9.1"
+  }
+}

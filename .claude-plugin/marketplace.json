@@ -1,0 +1,13 @@
+{
+  "name": "tellscript",
+  "owner": { "name": "Tellscript", "url": "https://tellscript.com" },
+  "metadata": { "description": "The Tellscript skill for Claude Code." },
+  "plugins": [
+    {
+      "name": "tellscript",
+      "source": "./",
+      "description": "Read, write and keep a Tellscript, the Markdown source format for AI-built software.",
+      "homepage": "https://tellscript.com/docs/agents"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tellscript.com/schema/front-matter.schema.json",
+  "title": "Tellscript front matter",
+  "description": "The YAML block at the top of every .tell.md file. Tellscript format, draft 0.1.",
+  "type": "object",
+  "required": ["tell"],
+  "properties": {
+    "tell": {
+      "description": "Level and name, for example feature/cart. Must match the file path.",
+      "type": "string",
+      "pattern": "^(product|feature|contract|recipe|file)/[a-z0-9][a-z0-9-]*(/[a-z0-9][a-z0-9-]*)*$"
+    },
+    "checks": { "$ref": "#/$defs/paths", "description": "Check files, reference images or recorded flows." },
+    "binds": { "$ref": "#/$defs/paths", "description": "Contracts this file touches, with the exact route, type or table after #." },
+    "face": { "$ref": "#/$defs/paths", "description": "Reference images and design tokens." },
+    "recipe": { "$ref": "#/$defs/pathOrPaths", "description": "Recipes for pictures, texts or data." },
+    "rationale": { "$ref": "#/$defs/paths", "description": "Decisions that explain rules in this file." },
+    "proof": {
+      "description": "Proof level, written by the check run.",
+      "type": "string",
+      "pattern": "^(described|bound|proven · edition [1-9][0-9]*)$"
+    },
+    "features": { "type": "array", "items": { "type": "string" }, "description": "Product files: feature names in reading order." },
+    "tokens": { "type": "string", "description": "Product files: the design token file." },
+    "edition": { "type": "integer", "minimum": 1, "description": "Product files: the running edition." },
+    "model": { "type": "string", "description": "Recipe files: model, variant and size." },
+    "refs": { "$ref": "#/$defs/paths", "description": "Recipe files: references the model is given." },
+    "lineage": { "type": "string", "description": "Recipe files: which outputs come from this recipe." }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "path": { "type": "string", "minLength": 1 },
+    "paths": { "type": "array", "items": { "$ref": "#/$defs/path" }, "minItems": 1 },
+    "pathOrPaths": { "oneOf": [{ "$ref": "#/$defs/path" }, { "$ref": "#/$defs/paths" }] }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "tellscript",
+  "version": "0.1.0",
+  "description": "Read, write and keep a Tellscript: the Markdown source format in tell/ that records what an app must do, how it looks and why, with a check per rule.",
+  "author": { "name": "Tellscript", "url": "https://tellscript.com" },
+  "homepage": "https://tellscript.com",
+  "repository": "https://github.com/tellscript-dev/tellscript",
+  "license": "Apache-2.0",
+  "keywords": ["tellscript", "specification", "agents", "markdown", "spec-driven-development"]
+}

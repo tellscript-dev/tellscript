@@ -1,0 +1,6 @@
+[files]
+extend-exclude = ["LICENSES/", "package-lock.json", "*.svg"]
+
+[default.extend-words]
+# Castwell product and voucher names in the example
+LOYAL = "LOYAL"
