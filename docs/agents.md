@@ -4,9 +4,30 @@ Make Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot or any other coding 
 
 Every coding agent already reads instruction files from your repository. Tellscript needs only a few lines in the file your agent reads, and the agent keeps the Tellscript up to date as it works.
 
+## Install the skill
+
+The Tellscript skill teaches your agent the whole format and when to use it. One command installs it for Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, OpenCode and other agents that read [Agent Skills](https://agentskills.io):
+
+`Terminal`
+
+```text
+npx skills add tellscript-dev/tellscript
+```
+
+In Claude Code you can add it as a plugin instead:
+
+`Claude Code`
+
+```text
+/plugin marketplace add tellscript-dev/tellscript
+/plugin install tellscript@tellscript
+```
+
+The skill, the spec and the schema live in the [tellscript-dev/tellscript](https://github.com/tellscript-dev/tellscript) repository.
+
 ## One prompt, any agent
 
-The fastest way: paste this into the agent you use. It teaches the agent the format from this site and writes the instructions into your repository, so the next session knows them too.
+No installer at hand? Paste this into the agent you use. It teaches the agent the format from this site and writes the instructions into your repository, so the next session knows them too.
 
 ```text
 Learn the Tellscript format from
