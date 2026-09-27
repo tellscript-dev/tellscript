@@ -33,4 +33,4 @@ jobs:
             deps
           requireScope: false
           subjectPattern: ^(?![A-Z]).+$
-          subjectPatternError: Start the subject with a lower-case letter, for example "docs: explain guided rings".
+          subjectPatternError: 'Start the subject with a lower-case letter, for example "docs: explain guided rings".'
