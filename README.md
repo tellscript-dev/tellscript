@@ -8,9 +8,8 @@
 </p>
 
 <p align="center">
-  <strong>Your app, written in Markdown.</strong><br>
-  A Tellscript records what your software must do, how it looks and why. Every rule has an id and a check.<br>
-  Any coding agent builds the code from it, and every new model builds the next, better edition.
+  A Tellscript records what your software must do, how it looks and why, in Markdown next to your code.<br>
+  Claude Code, Codex, Cursor or any other agent builds the code from it.
 </p>
 
 <p align="center">
